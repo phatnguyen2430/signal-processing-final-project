@@ -16,7 +16,7 @@ def home():
    # listImage = mainService.bit_8_image(stringbase64)
    input_data = InputObject.from_json(request_data)
 
-   if input_data.bit_24:
+   if input_data.bit_24 == "True":
       listImage = mainService.bit_24_image(filter_image=input_data.image, filter_mask_type=input_data.use_filter,
                                           filter_mask_filter_type=input_data.filter_type, filter_scale_out=input_data.scale_out, filter_scale_in=input_data.scale_in, n=input_data.n)
    else:
