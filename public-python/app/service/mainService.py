@@ -162,15 +162,15 @@ class ImageProcess:
         
         # multiple center fourier spectrum  with filter : y(x,y) = f(x,y)*h(x,y) => h is filter
         mask_red = center_red_spectrum * self.mask_filter
-        masked_red_spectrum = ImageObject("Fourier centered red spectrum",
+        masked_red_spectrum = ImageObject("Masked red spectrum",
                                           self.convertToRGB(self.fourierService.toImage(mask_red), "RED"))
 
         mask_green = center_green_spectrum * self.mask_filter
-        masked_green_spectrum = ImageObject("Fourier centered red spectrum",
+        masked_green_spectrum = ImageObject("Masked green spectrum",
                                             self.convertToRGB(self.fourierService.toImage(mask_green), "GREEN"))
 
         mask_blue = center_blue_spectrum * self.mask_filter
-        masked_blue_spectrum = ImageObject("Fourier centered red spectrum",
+        masked_blue_spectrum = ImageObject("Masked blue spectrum",
                                            self.convertToRGB(self.fourierService.toImage(mask_blue), "BLUE"))
         # end multiple
 
