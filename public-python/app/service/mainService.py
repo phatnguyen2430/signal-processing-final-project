@@ -98,14 +98,20 @@ class ImageProcess:
             "Filtered Image", self.convertToRGB(self.fourierService.toImage(filtered_image),"GRAY"))
 
 
-        # concatenate image to create image and save
-        concatenate_image = self.fourierService.toImage(np.dstack((filtered_image, filtered_image, filtered_image)))
-        final_image = ImageObject(
-            "Final image", self.convertToRGB(concatenate_image,"RGB"))
+        # # concatenate image to create image and save
+        # concatenate_image = self.fourierService.toImage(np.dstack((filtered_image, filtered_image, filtered_image)))
+        # final_image = ImageObject(
+        #     "Final image", self.convertToRGB(concatenate_image,"RGB"))
 
             # result
-        returnObject = [[saved_image_gray], [saved_spectrum],
-                        [saved_center_spectrum], [filtered_spectrum_image], [final_image]]
+        returnObject = [
+                        [saved_image_gray], 
+                        [saved_spectrum],
+                        [saved_center_spectrum], 
+                        [filtered_spectrum_image], 
+                        [converted_image], 
+                        [converted_image]
+                    ]
         return returnObject
 
     def bit_24_image_edge(self):
