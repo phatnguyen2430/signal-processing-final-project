@@ -1,7 +1,6 @@
 from app.service.filterService import FilterService
 from app.service.fourierService import FourierService
 import numpy as np
-from matplotlib import pyplot as plt
 import uuid
 from PIL import Image
 import base64
