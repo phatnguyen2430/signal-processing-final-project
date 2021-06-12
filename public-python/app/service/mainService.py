@@ -108,8 +108,7 @@ class ImageProcess:
                         [saved_image_gray], 
                         [saved_spectrum],
                         [saved_center_spectrum], 
-                        [filtered_spectrum_image], 
-                        [converted_image], 
+                        [filtered_spectrum_image],
                         [converted_image]
                     ]
         return returnObject
