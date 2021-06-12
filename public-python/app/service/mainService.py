@@ -73,7 +73,7 @@ class ImageProcess:
         # convert image to gray image
         converted_image_gray = self.fourierService.convertImageColor(
             self.image)
-        saved_image_gray = ImageObject("Gray image", converted_image_gray)
+        saved_image_gray = ImageObject("Gray image", self.convertToRGB(converted_image_gray,"GRAY"))
 
         # make fourier spectrum 
         gray_spectrum = self.fourierService.ImageToFFT(converted_image_gray)
