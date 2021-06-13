@@ -242,12 +242,12 @@ class MainService:
     def bit_8_image(self,filter_image,filter_mask_type="IDEAL",filter_mask_filter_type="HIGH",filter_scale_out=100,filter_scale_in=50,n = 20):
         image = readb64(filter_image)
         imageprocess = ImageProcess(image)
-        imageprocess.set_filter(mask_type=filter_mask_type, scale_out=filter_scale_out)
+        imageprocess.set_filter(mask_type=filter_mask_type,filter_type=filter_mask_filter_type, scale_out=filter_scale_out,scale_in=filter_scale_in)
         listReturn = imageprocess.bit_8_image_edge()
         return listReturn
     def bit_24_image(self,filter_image,filter_mask_type="IDEAL",filter_mask_filter_type="HIGH",filter_scale_out=100,filter_scale_in=50,n = 20):
         image = readb64(filter_image)
         imageprocess = ImageProcess(image)
-        imageprocess.set_filter(mask_type=filter_mask_type, scale_out=filter_scale_out)
+        imageprocess.set_filter(mask_type=filter_mask_type,filter_type=filter_mask_filter_type, scale_out=filter_scale_out,scale_in=filter_scale_in)
         listReturn = imageprocess.bit_24_image_edge()
         return listReturn
